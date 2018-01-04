@@ -1,7 +1,10 @@
-from mapscript import mapObj
 
 def application(env, start_response):
-    print env["mapfile"]
-    start_response('200 OK', [('Content-Type','text/html')])
-    return [b"Hello World"]
-
+    mapfiles = env["mapfile"]
+    print mapfiles
+    s = b"hello,world"
+    start_response('200 OK', [
+        ('Content-Type','text/html'),
+        ('Content-Length',str(len(s)))
+    ])
+    return [s]
