@@ -2,5 +2,6 @@
 
 **参考**：
 
-[【Tonado iostreams示例代码】](http://www.tornadoweb.org/en/stable/_modules/tornado/iostream.html#IOStream)
+[【Tonado iostream示例代码】](http://www.tornadoweb.org/en/stable/_modules/tornado/iostream.html#IOStream)
 [【与uWSGI socket通信示例代码】](https://github.com/akx/uwsgi-socket-example)
+[【iostream基于yield方式通信示例代码】](https://programtalk.com/vs2/python/13715/viewfinder/marketing/tornado/test/concurrent_test.py/)
