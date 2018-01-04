@@ -3,6 +3,31 @@ import tornado.iostream
 import socket
 import struct
 
+#def getContentLength(data):
+#    for line in data.split(b"\r\n"):
+#        parts = line.split(b":")
+#        if len(parts) == 2:
+#            hkey = parts[0].strip()
+#            if hkey == b"Content-Length":
+#                return int(parts[1].strip())
+#
+#@gen.coroutine
+#def render_tile(self, mapobj):
+#    mapfile = os.path.join(self.MAP_DIR, str(uuid.uuid4()).replace("-", "")+".map")
+#    mapobj.save(mapfile)
+#    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+#    stream = IOStream(sock)
+#    yield gen.Task(stream.connect, os.path.join(self.MAP_DIR, self.MAPSERVER_SOCKET))
+#    data = encode_uwsgi_vars({"mapfile": mapfile}.items())
+#    header = struct.pack('<BHB', 0, len(data), 0)
+#    yield gen.Task(stream.write, header)
+#    yield gen.Task(stream.write, data)
+#    headers = yield gen.Task(stream.read_until, b"\r\n\r\n")
+#    length = getContentLength(headers)
+#    img_tile = yield gen.Task(stream.read_bytes, length)
+#    stream.close()
+#    raise gen.Return(img_tile)
+
 def force_bytes(value):
     if isinstance(value, bytes):
         return value
